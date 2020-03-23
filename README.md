@@ -1,4 +1,4 @@
-# vue-ansync-component
+# vue-async-component
 
 ## Project setup
 ```
