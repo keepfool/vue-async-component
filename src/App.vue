@@ -4,7 +4,7 @@
      <h1>Vue Async Component Demo</h1>
     <div>
       <List v-if="show" />
-      <button @click="show = !show">Show</button>
+      <button @click="show = !show">Show List</button>
     </div>
   </div>
 </template>
