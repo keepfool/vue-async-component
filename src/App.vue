@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
+     <h1>Vue Async Component Demo</h1>
     <div>
       <List v-if="show" />
       <button @click="show = !show">Show</button>
