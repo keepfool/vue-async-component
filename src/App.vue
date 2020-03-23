@@ -1,17 +1,33 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>
+      <List v-if="show" />
+      <button @click="show = !show">Show</button>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Error from './components/Error'
+import Loading from './components/Loading'
+
+const List = () => ({
+  component: import(/* webpackChunkName: "list" */ './components/List.vue'),
+  loading: Loading,
+  error: Error,
+  timeout: 30000
+})
 
 export default {
   name: 'App',
+  data() {
+    return {
+      show: false
+    }
+  },
   components: {
-    HelloWorld
+    List
   }
 }
 </script>
